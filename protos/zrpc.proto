@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "./";
+
+message zprcRequest {}
+
+message RealizarPedidoResponse {
+  string zrpcResponse = 1;
+}
+
+service ZrpcService {
+  rpc ZrpcMethod(zprcRequest) returns (RealizarPedidoResponse);
+}
+
+
+
